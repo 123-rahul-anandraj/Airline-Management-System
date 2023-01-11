@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer detail</title>
+</head>
+<form method="POST">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <body>
+        <form name="customer_detail" action="." method="get">
+            <div class="container">
+                <div>
+                    <header>
+                        <div class="logo">
+                            <a href="creating_header.html">
+                                <img src="{% static 'media/xie.png' %}" width="100px" length="50px" alt="logo">
+                            </a>
+                        </div>
+                        <div class="search">
+                            <form method="POST">
+                                <img src="{% static 'media/xie.png' %}" width="100px" length="50px" alt="logo">
+                            </form>
+
+                        </div>
+                    </header>
+
+                    <div class="clear"></div>
+                    <div class="nav">
+                        <ul>
+                            <li><a href="{% url 'website_home' %}">Home</a></li>
+                            <li><a href="{% url 'air_plane_about_us' %}">About</a></li>
+                            <li><a href="{% url 'airline_contact_us' %}">Contact</a></li>
+
+
+                            <li class="service">
+                                <a href="#">Booking system</a>
+                                <ul>
+                                    <li><a href="{% url 'airline_booking_customer_detail' %}">Customer detail</a></li>
+                                    {%  if messages %}
+                                    <li><a href="{% url 'airline_booking_journey_detail' %}">Journey detail</a></li>
+                                    <li><a href="{% url 'airline_website_payment_detail' %}">Payment details</a></li>
+                                    <li><a href="{% url 'airline_booking_cancelation' %}">Cancellation</a></li>
+                                    {% endif %}
+
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <section class="banner cycle-slideshow">
+                    <img src="{% static 'media/indigo.png' %}">
+                    <img src="{% static 'media/go air.jpg' %}">
+                    <img src="{% static 'media/air_india.jpg' %}">
+
+
+                </section>
+                <section class="content-holder">
+                    <article class="content">
+                        <h2>Customer Details</h2>
+                        <p>Please Enter your details: </p>                        
+                            {% csrf_token %}
+                            <div class="customer_detail">
+                                <table>
+                                    <tr>
+                                        <td>Name: </td>
+                                        <td><input type="text" name="F_name" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Age: </td>
+                                        <td><input type="text" name="customer_age" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email: </td>
+                                        <td><input type="email" name="email" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Contact no.: </td>
+                                        <td><input type="tel" name="mobile_no" required=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address: </td>
+                                        <td><textarea name="customer_address" cols="30" rows="5"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gender: </td>
+                                        <td>
+                                            <input type="radio" name="customer_gender" value="Male"> Male
+                                            <input type="radio" name="customer_gender" value="Female">Female
+                                            <input type="radio" name="customer_gender" value="other">Other
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>D.O.B</td>
+                                        <td><input type="date" name="Date_of_birth" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td>UserName: </td>
+                                        <td><input type="text" name="username" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Password: </td>
+                                        <td><input type="password" name="password" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="submit" name="save" value="Save Details"></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        <p align="center">
+                            {% if messages %}
+                    <strong><font color="green" size="4">
+                                {% for message in messages %}
+                                {{message}}
+                                {% endfor %}
+                            </font></strong>
+                              {% elif obj_datemsg %}
+                    <strong><font color="red" size="4">
+                              {{obj_datemsg}}
+                            </font></strong>
+                            {% endif %}
+                        </p>
+                        </form>
+                        <div class="clear"></div>
+
+
+                    </article>
+                    <aside class="side-bar">
+                        <div>
+                            <p> </p>
+                            <p> </p>
+                            <p> </p>
+
+                        </div>
+                    </aside>
+                    <div class="clear"></div>
+                </section>
+                <footer class="footer">
+                    <div class="footer-main">
+                        <ul>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp; </li>
+                            <li> &nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li> &nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        </ul>
+                    </div>
+                    <div class="footer-main">
+                        <ul>
+                            <li> &nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp; </li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp; </li>
+                        </ul>
+                    </div>
+                    <div class="footer-main">
+                        <ul>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp; </li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp; </li>
+                            <li> &nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        </ul>
+                    </div>
+                    <div class="footer-main">
+                        <ul>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp; </li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp; </li>
+                            <li> &nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </footer>
+                <div class="copy">
+                    <p> </p>
+                </div>
+            </div>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+            <script src="http://malsup.github.com/jquery.cycle2.js"></script>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer detail</title>
+</head>
+<link rel="stylesheet" href="style2.css">
+<body>
+	<div class="container">
+	<div>
+		<header>
+			<div class="logo">
+				<a href="creating_header.html">
+						<img src="media/xie.png" width="100px" length="50px" alt = "logo">
+					</a>
+				</div>
+				<div class="search"><form method="POST">
+					<img src="media/xie.png" width="100px" length="50px" alt = "logo">
+				</form>
+					
+				</div>
+			</header>
+
+			<div class="clear"></div>
+			<div class="nav">
+		<ul>
+            <li><a href="website_home.html">Home</a></li>
+            <li><a href="air_plane_about_us.html">About</a></li>
+            <li><a href="airline_contact_us.html">Contact</a></li>
+
+
+            <li class="service"><a href="#">Booking system</a>
+                    <ul>
+                        <li><a href="airline_booking_journey_detail.html">Journey detail</a></li>
+                        <li><a href="airline_booking_flight_info.html">Flight info</a></li>
+                        <li><a href="airline_booking_customer_detail.html">Customer detail</a></li>
+                        <li><a href="airline_website_payment_detail.html">Payment details</a></li>
+                        <li><a href="airline_booking_cancelation.html">Cancellation</a></li>
+                        
+                    </ul>
+                </li>
+
+
+        </ul>
+	</div>
+	</div>
+	<section class = "banner cycle-slideshow"> 
+		<img src="airline/indigo.png" >
+		<img src="airline/go air.jpg" >
+		<img src="media/air_india.jpg" >
+   
+
+		</section>
+		<section class="content-holder">
+    	<article class="content">
+    		<h2>Customer Details</h2>
+    		<p>Please Enter your details: </p>
+
+            <div class="customer_detail">
+               <table>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="email" name="email" required ></td>
+            </tr>
+            <tr>
+                <td>Contact no.: </td>
+                <td><input type="tel" name="contact_no" required=""></td>
+            </tr>
+            <tr>
+                <td>Address: </td>
+                <td><textarea name= "message" cols="30" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>Gender: </td>
+                <td><input type="radio" name="Gender" value="Male"> Male
+                    <input type="radio" name="Gender" value="Female">Female
+                <input type="radio" name="Gender" value="other">Other</td>
+            </tr>
+            <tr>
+                <td>D.O.B</td>
+                <td><input type="date" name="birth_date" required></td>
+            </tr>
+            <tr>
+                <td>PNR Number.: </td>
+                <td><input type="tel" name="pnr_number" required=""></td>
+            </tr>
+            <tr>
+                <td>Flight Code: </td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+
+            
+            <tr>
+                <td><input type="submit" name="save" value="Save Details" ></td>
+            </tr>
+            
+        </table>
+            </div>
+                
+                <div class="clear"></div>
+
+            
+    	</article>
+    	<aside class="side-bar">
+    		<div>
+                <p>mandetary things...</p>
+                <p>self declaration...</p>
+                <p>bag tags...</p>
+    			
+    		</div>
+    	</aside>
+    	<div class="clear"></div>
+    </section>
+    <footer class="footer">
+    	<div class="footer-main">
+    		<h3>footer1</h3>
+    		<ul>
+    			<li><a href="#">home</a></li>
+    			<li><a href="#">about</a></li>
+    			<li><a href="#">subject</a></li>
+    		</ul>
+    	</div>
+    	<div class="footer-main">
+    		<h3>footer2</h3>
+    		<ul>
+    			<li><a href="#">home</a></li>
+    			<li><a href="#">about</a></li>
+    			<li><a href="#">subject</a></li>
+    		</ul>
+    	</div>
+    	<div class="footer-main">
+    		<h3>footer3</h3>
+    		<ul>
+    			<li><a href="#">home</a></li>
+    			<li><a href="#">about</a></li>
+    			<li><a href="#">subject</a></li>
+    		</ul>
+    	</div>
+    	<div class="footer-main">
+    		<address>
+    			<p>100, name, place, 4455</p>
+    			<p><a href="gmail@gmail.com">gmail@gmail.com</a></p>
+    			<p><a href="tel:1234586">tel:1234586</a></p>
+    		</address>
+    	</div>
+    	<div class="clear"></div>
+    </footer>
+    <div class ="copy">
+    	<p><small>Copyright &copy; 2020 All right are reserved</small></p>
+    </div>
+    </div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+</body>
+</html>
